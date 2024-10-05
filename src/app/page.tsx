@@ -1,101 +1,47 @@
-import Image from "next/image";
+"use client";
+
+import Lottie from 'react-lottie-player';
+import lottieJson from '@/../public/animation.json';
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <motion.div
+            initial={{opacity: 0, scale: 0.9}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: 0.7}}
+            className="h-full"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+            <main className="container mx-auto p-5 flex flex-col md:flex-row items-center h-screen overflow-auto">
+                <div className="flex flex-col space-y-9 py-10 md:py-24 flex-[7] overflow-auto">
+                    <div className="space-y-4 max-w-[700px]">
+                        <Badge>풀스택</Badge>
+                        <h1 className="text-4xl">안녕하세요 개발자 은현입니다 👋</h1>
+                        <p className="text-lg text-foreground/60 leading-relaxed">
+                            인간의 그들의 가장 피다. 천고에 것은 끝까지 풍부하게 그것을 풀이 길지 피다. 굳세게 인생의 사람은 따뜻한 시들어 끓는 그들에게 튼튼하며, 위하여, 듣는다. 가치를
+                            그림자는 이것은 자신과 듣기만 소리다.이것은 이것이다. 얼마나 위하여 뜨거운지라, 철환하였는가? 위하여서, 그들의 피고 되려니와, 봄바람을 남는 영락과 천지는 같은
+                            것이다.
+                            만물은 황금시대를 투명하되 그림자는 전인 우리는 가는 무엇을 있으랴? 이상 이것은 인간의 것은 청춘의 황금시대다. 사랑의 풀이 대한 위하여서 것이다.
+                        </p>
+                    </div>
+                    <Button className="max-w-fit" aria-label="프로젝트 보러가기" asChild>
+                        <Link href="/project">
+                            프로젝트 보러가기
+                        </Link>
+                    </Button>
+                </div>
+                <div className="flex-[4] md:max-w-[40%] overflow-hidden">
+                    <Lottie
+                        loop
+                        animationData={lottieJson}
+                        play
+                        style={{width: '100%', height: '100%'}}
+                    />
+                </div>
+            </main>
+        </motion.div>
+    );
 }
